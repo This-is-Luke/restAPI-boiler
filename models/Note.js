@@ -5,14 +5,14 @@ const noteSchema = new mongoose.Schema({
         required: true,
         ref: 'User'
     },
-    mealType: {
+    mealType: [{
         type: String,
         required: true
-    },
+    }],
     mealDescription: {
         type: String,
         required: true
-    },
+    }
 });
 
 module.exports = mongoose.model('Note', noteSchema);
